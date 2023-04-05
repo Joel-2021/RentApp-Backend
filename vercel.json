@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "rental_application/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "rental_application/wsgi.py"
+        }
+    ]
+}
