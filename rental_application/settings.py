@@ -25,7 +25,7 @@ SECRET_KEY ='django-insecure-t9^pxze^4n$zjo0p1!84m0gh8h6fau11@16n*464(_w+)zdjgp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','https://rentalapplicationmanagement.onrender.com/']
 
 
 # Application definition
@@ -93,8 +93,7 @@ MIDDLEWARE = [
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    # "https://astonishing-dieffenbachia-92cda2.netlify.app/",
+    'https://rentalapplicationmanagement.onrender.com',
     "http://localhost:3000",
     "http://127.0.0.1:9000",
 ]
