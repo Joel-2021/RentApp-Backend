@@ -25,7 +25,7 @@ SECRET_KEY ='django-insecure-t9^pxze^4n$zjo0p1!84m0gh8h6fau11@16n*464(_w+)zdjgp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -94,7 +94,7 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
     "https://example.com",
-    "https://sub.example.com",
+    # "https://astonishing-dieffenbachia-92cda2.netlify.app/",
     "http://localhost:3000",
     "http://127.0.0.1:9000",
 ]
@@ -126,10 +126,10 @@ WSGI_APPLICATION = 'rental_application.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 SOCIALACCOUNT_PROVIDERS = {
