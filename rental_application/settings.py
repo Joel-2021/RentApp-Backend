@@ -25,7 +25,7 @@ SECRET_KEY ='django-insecure-t9^pxze^4n$zjo0p1!84m0gh8h6fau11@16n*464(_w+)zdjgp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =True
 
-ALLOWED_HOSTS = ['127.0.0.1','https://rentapp-jl2v.onrender.com','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','rentapp-jl2v.onrender.com','localhost']
 
 
 # Application definition
