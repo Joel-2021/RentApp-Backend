@@ -65,22 +65,22 @@ class OwnerListView(generics.ListAPIView):
 
 class LoginView(APIView):
     serializer_class = LoginSerializer
-    permission_classes = [AllowAny]
-
+    permission_classes  = [AllowAny]
     def post(self, request: Request, format=None):
         data = request.data
         email = data.get('email', None)
         password = data.get('password', None)
+        
         user = authenticate(email=email, password=password)
         if user is not None:
             login(request, user)
+            
             tokens = create_jwt_pair_for_user(user)
-            Token.objects.get_or_create(tokens)
-            response = {
-                'message': "Login Successfully",
-                "Token": tokens
-            }
 
+            response = {
+                'message':"Login Successfully",
+                "Token":tokens
+            }
 
             return Response(data=response, status=status.HTTP_200_OK)
         else:
@@ -92,8 +92,6 @@ class LoginView(APIView):
             "auth": str(request.auth)
         }
         return Response(data=response, status=status.HTTP_200_OK)
-
-
 class User_logout(APIView):
     permission_classes = [IsAuthenticated]
     # authentication_classes=[]
